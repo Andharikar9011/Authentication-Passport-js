@@ -6,13 +6,16 @@
 body {
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+.login-forms {
+  display: flex;
+}
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   width: 100%;
-  height: 5rem;
+  height: 15%;
   background-color: #5800ff;
 }
 nav li {
@@ -44,4 +47,9 @@ main {
   font-size: 1.2rem;
   padding: 0.8rem;
   background-color: #ff5353;
+}
+.single_page {
+  width: 100%;
+  height: 85%;
+  background-color: #5800ff;
 }

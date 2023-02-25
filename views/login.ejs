@@ -5,19 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <nav>
       <ul>
         <li><a href="/">Homepage</a></li>
-        <li><a href="/auth/login">Login</a></li>
+        <li><a href="/auth/register">Register</a></li>
         <li><a href="/auth/logout">Logout</a></li>
       </ul>
     </nav>
     <header>
       <h1>Login using ...</h1>
     </header>
-    <main><a class="google_button" href="/auth/google">Google+</a></main>
+    <!-- <main><a class="google_button" href="/auth/google">Google+</a></main> -->
+    <div class="login-forms">
+      <div>
+        <h2>Basic Login</h2>
+        <form method="post" action="/auth/normallogin">
+          <label for="fname">Email</label><br />
+          <input type="email" id="username" name="username" /><br />
+          <label for="lname">Password</label><br />
+          <input type="password" id="password" name="password" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div>
+        <h2>Passport Local Login</h2>
+        <form method="post" action="/auth/pllogin">
+          <label for="fname">Email</label><br />
+          <input type="email" id="username" name="username" /><br />
+          <label for="lname">Password</label><br />
+          <input type="password" id="password" name="password" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div>
+        <a class="btn" role="button" href="/auth/google"
+          ><i class="fa fa-google" style="font-size: 48px"></i
+        ></a>
+      </div>
+      <div>
+        <a class="btn" role="button" href="/auth/facebook"
+          ><i class="fa fa-facebook" style="font-size: 48px"></i
+        ></a>
+      </div>
+    </div>
   </body>
 </html>

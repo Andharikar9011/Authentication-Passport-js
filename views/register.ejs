@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="/">Homepage</a></li>
+        </ul>
+      </nav>
+      <div class="single_page">
+        <h1>Register using ...</h1>
+        <div class="login-forms">
+          <div>
+            <h2>Login With Basic ID password</h2>
+            <form method="post" action="/auth/normalregister">
+              <label for="fname">Email</label><br />
+              <input type="email" id="username" name="username" /><br />
+              <label for="fname">Name</label><br />
+              <input type="text" id="name" name="name" /><br />
+              <label for="lname">Password</label><br />
+              <input type="password" id="password" name="password" />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div>
+            <h2>Login With Passport-Local-Mongoose</h2>
+            <form method="post" action="/auth/plregister">
+              <label for="fname">Email</label><br />
+              <input type="email" id="username" name="username" /><br />
+              <label for="fname">Name</label><br />
+              <input type="text" id="name" name="name" /><br />
+              <label for="lname">Password</label><br />
+              <input type="password" id="password" name="password" />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div>
+            <a class="btn" role="button" href="/auth/google"
+              ><i class="fa fa-google" style="font-size: 48px"></i
+            ></a>
+          </div>
+          <div>
+            <a class="btn" role="button" href="/auth/facebook"
+              ><i class="fa fa-facebook" style="font-size: 48px"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
