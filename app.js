@@ -56,7 +56,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/dashboard",
+      callbackURL: process.env.APP_URL.concat("auth/google/dashboard"),
       // userProfileURL: "http://www.googleapis.com/oauth2/v3/userinfo",
     },
     function (req, accessToken, refreshToken, profile, cb) {
@@ -91,7 +91,7 @@ passport.use(
     {
       clientID: process.env.FACEBOOK_APP_ID,
       clientSecret: process.env.FACEBOOK_APP_SECRET,
-      callbackURL: "http://localhost:3000/auth/facebook/callback",
+      callbackURL: process.env.APP_URL.concat("auth/facebook/callback"),
     },
     function (accessToken, refreshToken, profile, cb) {
       console.log("in stratergy");
