@@ -12,47 +12,69 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
+    <script>
+      function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "none") {
+          x.style.display = "flex";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+    <nav class="nav">
+      <ul class="nav_ul">
         <li><a href="/">Homepage</a></li>
         <li><a href="/auth/register">Register</a></li>
-        <li><a href="/auth/logout">Logout</a></li>
       </ul>
     </nav>
-    <header>
+    <div class="single_page single_page_gap">
       <h1>Login using ...</h1>
-    </header>
-    <!-- <main><a class="google_button" href="/auth/google">Google+</a></main> -->
-    <div class="login-forms">
-      <div>
-        <h2>Basic Login</h2>
-        <form method="post" action="/auth/normallogin">
-          <label for="fname">Email</label><br />
-          <input type="email" id="username" name="username" /><br />
-          <label for="lname">Password</label><br />
-          <input type="password" id="password" name="password" />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      <div>
-        <h2>Passport Local Login</h2>
-        <form method="post" action="/auth/pllogin">
-          <label for="fname">Email</label><br />
-          <input type="email" id="username" name="username" /><br />
-          <label for="lname">Password</label><br />
-          <input type="password" id="password" name="password" />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      <div>
-        <a class="btn" role="button" href="/auth/google"
-          ><i class="fa fa-google" style="font-size: 48px"></i
-        ></a>
-      </div>
-      <div>
-        <a class="btn" role="button" href="/auth/facebook"
-          ><i class="fa fa-facebook" style="font-size: 48px"></i
-        ></a>
+      <div class="login_forms">
+        <!-- <div class="form">
+          <h2 class="btn btn_ex" onclick="myFunction('hidden_form1')">
+            Basic Login
+          </h2>
+          <form
+            id="hidden_form1"
+            class="hidden_form"
+            method="post"
+            action="/auth/normallogin"
+          >
+            <label for="fname">Email</label><br />
+            <input type="email" id="username" name="username" /><br />
+            <label for="lname">Password</label><br />
+            <input type="password" id="password" name="password" />
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div> -->
+        <div class="form">
+          <h2 class="btn btn_ex" onclick="myFunction('hidden_form2')">
+            Passport Local Login
+          </h2>
+          <form
+            id="hidden_form2"
+            class="hidden_form"
+            method="post"
+            action="/auth/pllogin"
+          >
+            <label for="fname">Email</label><br />
+            <input type="email" id="username" name="username" /><br />
+            <label for="lname">Password</label><br />
+            <input type="password" id="password" name="password" />
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="form">
+          <a class="btn gbtn" role="button" href="/auth/google"
+            ><i class="fa fa-google" style="font-size: 48px"></i
+          ></a>
+        </div>
+        <div class="form">
+          <a class="btn fbtn" role="button" href="/auth/facebook"
+            ><i class="fa fa-facebook" style="font-size: 48px"></i
+          ></a>
+        </div>
       </div>
     </div>
   </body>

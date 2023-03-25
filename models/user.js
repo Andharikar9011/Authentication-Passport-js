@@ -6,24 +6,13 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const userSchema = new Schema({
   username: String,
   name: String,
-  googleId: {
-    type: String,
-    unique: true,
-  },
-  facebookId: {
-    type: String,
-    unique: true,
-  },
-  twitterId: {
-    type: String,
-    unique: true,
-  },
-  githubId: {
-    type: String,
-    unique: true,
-  },
+  googleId: String,
+  facebookId: String,
   password: String,
   photo: String,
+  secrets: {
+    type: Array,
+  },
 });
 userSchema.plugin(passportLocalMongoose);
 // userSchema.plugin(findOrCreate);

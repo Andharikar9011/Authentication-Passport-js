@@ -1,0 +1,11 @@
+testing
+http://localhost:3000
+
+testing redirect uri
+http://localhost:3000/auth/google/dashboard
+
+credential uri
+https://authorizer-proj.azurewebsites.net
+
+redirect url
+https://authorizer-proj.azurewebsites.net/auth/google/dashboard
